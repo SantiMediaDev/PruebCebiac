@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba CEBIAC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">CEBIAC</a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="#">Quienes Somos</a></li>
+            <li><a href="#">Composición</a></li>
+            <li><a href="#">Contacto</a></li>
+       </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" alt="" id="stars">
+        <img src="images/stars2.png" alt="" id="stars2">
+        <!----> <img src="images/moon.png" alt="" id="moon"> 
+        <h2 id="text">CEBIAC</h2>
+        <img src="images/rock.png" alt="" id="rock">
+        <img src="images/atom.png" alt="" id="atom">
+        <img src="images/bottom2.png" alt="" id="bottom">
+        <img src="images/micro.png" alt="" id="micro">
+    </section>
+
+    <div class="sec">
+        <h2>Bienvenidos al centro de Innovación y Emprendimiento.</h2>
+        <p>CEBIAC es el centro de Estudios Bits y Átomos de la CUN, aquí realiamos un análisis profundo y difusión de las tendencias, innovaciones, mejoramientos y desarrollos de propuestas
+            que cambien la experiencia de la educación, gestión y administración de cualquier modelo. Trabajamos desde todos los frentes de observación, contamos con mas de 10 profesionales
+            en el área. Nuestro trabajo ha impactado a más de 320000 personas en nuestra organización.
+        </p>
+
+        
+    </div>
+
+    <div class="containerMision">
+        <div class="card">
+            <div class="content">
+                <h2>Misión</h2>
+                <p>Proponer y ejecutar ideas innovadoras orientadas al fortalecimiento y consolidación de la CUN como institución que se adapta a los retos y desafíos de la educación en el siglo XXI.</p>
+            </div>
+            <img src="images/mision.png" alt="" >
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <h2>Visión</h2>
+                <p>CEBIAC se proyecta como un centro de innovación educativa reconocido a nivel nacional e internacional, orientado al fortalecimiento del sentido de pertenencia Cunista mediante la ejecución de proyectos de innovación pedagógica tecnológica y empresarial.</p>
+            </div>
+            <img src="images/vision.png" alt="imagen vision" >
+        </div>
+    </div>
+
+    <div class="sec">
+        <h2>Objetivo</h2>
+        <p>Investigar, proponer y fomentar la innovación educativa mediante el desarrollo de proyectos de innovación tecnológica, social y empresarial que sirvan como insumo para la construcción de enfoques pedagógicos acordes a los retos y desafíos de la sociedad actual.
+        </p>
+        <div class="imagenObjetivos"><img src="images/objetivos.png" alt="">   </div>
+
+    </div>
+
+    <div class="gridProyectos">
+        <div class="griid"><img src="images/c-vivo.png" alt=""></div>
+        <div class="griid"><img src="images/arcunoid.png" alt=""></div>
+        <div class="griid"><img src="images/banglite.png" alt=""></div>
+        <div class="griid"><img src="images/pivoc.png" alt=""></div>
+        <div class="griid"><img src="images/sapiolab.png" alt=""></div>
+        <div class="griid"><img src="images/mataphi.png" alt=""></div>
+        <div class="griid"><img src="images/cunmovil.png" alt=""></div>
+        <div class="griid"><img src="images/eido.png" alt=""></div>
+        <div class="griid"><img src="images/ppao.png" alt=""></div>  
+      </div>
+
+    <div class="organigrama"><img src="images/organigrama.png" alt=""></div>
+
+
+    <script>
+
+        let stars = document.getElementById('stars');
+        let stars2 = document.getElementById('stars2');
+        let moon = document.getElementById('moon');
+        let rock = document.getElementById('rock');
+        let atom = document.getElementById('atom');
+        let text = document.getElementById('text');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.bottom = value * 0.05 + '%';
+            stars2.style.bottom = value * 0.025 + '%';
+            moon.style.bottom = value * -0.5 + 'px';
+            rock.style.bottom = value * -0.75 + 'px';
+            atom.style.bottom = value * -0.15 + 'px';
+            text.style.right = -100 + value * 0.5 + '%';
+            text.style.top = 20 + value * 0.1 + '%';
+
+            header.style.top = value * 0.5 + 'px';
+
+        })
+        
+
+
+
+        const toggleMenu = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation')
+        toggleMenu.onclick = function(){
+            toggleMenu.classList.toggle('active')
+            navigation.classList.toggle('active')
+
+        }
+    </script>
+</body>
+</html>
